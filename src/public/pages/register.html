@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat</title>
+
+    <link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" />
+    <link rel="stylesheet/less" href="less/inbox.less" type="text/css" />
+    <link
+      rel="stylesheet/less"
+      href="less/jquery.mCustomScrollbar.less"
+      type="text/css"
+    />
+    <link rel="stylesheet/less" href="font/font-awesome.less" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <script src="/js/less.min.js"></script>
+
+    <style>
+      .box {
+        padding: 2%;
+        /* background: #ffffff; */
+        background: rgba(255, 255, 255, 0.7);
+        /* display: table; */
+        border-radius: 5px;
+        /* position: relative; */
+        box-shadow: 5px 5px 20px rgb(0 0 0 / 15%) !important;
+      }
+    </style>
+    <style>
+      .container {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 33%;
+        height: 50%;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="box">
+          <form action="javascript:void(0)">
+            <div class="form-group">
+              <label for="fname" class="control-label">Nome completo</label>
+              <input
+                required
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Nome completo"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lname" class="control-label">Email</label>
+              <input
+                required
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password" class="control-label">Senha</label>
+              <input
+                required
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Senha"
+              />
+            </div>
+            <button type="button" class="btn btn-secondary btn-lg btn-block">
+              Sign up
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="/js/jquery-3.0.0.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script>
+      (function ($) {
+        $(window).on("load", function () {
+          $(
+            ".message-list, .chatter, .comment-section, .storyline"
+          ).mCustomScrollbar({
+            theme: "dark-3",
+          });
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>
